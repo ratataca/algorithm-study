@@ -1,3 +1,4 @@
+
 def recursive(arr, m, operators_list):
     if m == len(arr):
         operators_list.append(list(arr))
