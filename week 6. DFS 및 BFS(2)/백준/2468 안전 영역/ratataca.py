@@ -37,9 +37,9 @@ for num in range(1, max_num):
         _map.append([])
         for x in y:
             if x <= num:
-                _map[-1].append(0)
+                _map[-1].append(0) # 낮은 지역
             else:
-                _map[-1].append(1)
+                _map[-1].append(1) # 높은 지역
 
     visited = 0
     # 큐 초기화 
