@@ -13,7 +13,6 @@ def solution(tickets):
     answer = []
 
     while stack:
-        
         if List[stack[-1]] == []:
             answer.append(stack.pop())
         else:

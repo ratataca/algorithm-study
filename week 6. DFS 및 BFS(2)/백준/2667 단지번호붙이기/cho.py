@@ -7,7 +7,7 @@ dx = [1, -1, 0, 0]
 dy = [0, 0, 1, -1]
 counts = []
 
-def BFS(i, j):
+def DFS(i, j):
   stack=[(i, j)]
   count = 0
   while stack:
@@ -18,10 +18,8 @@ def BFS(i, j):
       if 0 <= nx < N and 0 <= ny < N:
         if matrix[nx][ny]==1 and visited[nx][ny]==0:
           visited[nx][ny]=number
-          # print(number)
           stack.append((nx, ny))
           count+=1
-      # print(queue)
   
   counts.append(count)
   # for ele in visited:
@@ -30,6 +28,9 @@ def BFS(i, j):
 for i in range(N):
   for j in range(N):
     if matrix[i][j]==1 and visited[i][j]==0:
-      BFS(i, j)
+      DFS(i, j)
 
-print(counts)
+print(len(counts))
+
+for i in counts:
+  print(i)
