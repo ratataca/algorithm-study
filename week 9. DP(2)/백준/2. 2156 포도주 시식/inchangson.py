@@ -16,8 +16,11 @@ def drink(cur_idx, cur_cnt):
 
     return memo[cur_idx][cur_cnt]
     
-n = int(input())
-wine = [int(input()) for _ in range(n)]
+# n = int(input())
+# wine = [int(input()) for _ in range(n)]
+n = 6
+wine = [6, 10, 13, 9, 8, 1]
+
 memo = [[-1, -1] for _ in range(n)]
 
 ans = drink(0, 0)
