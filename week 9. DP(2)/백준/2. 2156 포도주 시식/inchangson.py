@@ -24,4 +24,4 @@ wine = [6, 10, 13, 9, 8, 1]
 memo = [[-1, -1] for _ in range(n)]
 
 ans = drink(0, 0)
-print(ans)
+print(ans) 
