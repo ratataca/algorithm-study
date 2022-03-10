@@ -1,23 +1,13 @@
+N, K = [int(n) for n in input().split()]
+coins = [int(input()) for _ in range(N)]
 
-def count_coins(target, sums):
-    if sums == target:
-        return 1
-    elif sums > target:
-        return 0
+memo = [0] * (K+1)
+memo = [0] * (K+1)
 
-    result = 0 
-    for coin in coins:
-        result += count_coins(target, sums + coin)
-    
-    return result
+memo[0] = 1
 
+for coin in coins:
+    for val in range(coin, K+1):
+        memo[val] += memo[val-coin]
 
-# N, K = [int(n) for n in input().split()]
-# coins = [int(input()) for _ in range(N)]
-
-
-##test
-N, K = 3, 10
-coins = [1, 2, 5]
-
-print(count_coins(K, 0))
+print(memo[-1])
