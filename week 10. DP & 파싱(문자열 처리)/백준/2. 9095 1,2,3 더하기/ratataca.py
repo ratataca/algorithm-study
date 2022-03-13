@@ -7,7 +7,6 @@ def make_case(target, sums):
     result = 0 
     for num in nums:    
         result += make_case(target, sums + num)
-    
     return result
 
 
