@@ -3,7 +3,6 @@ k = int(input())  # 시작할 노드
 INF = 1e8
 
 graph = [[] for _ in range(n + 1)]  # 1번 노드부터 시작하므로 하나더 추가
-
 distance = [INF] * (n + 1)
 
 for _ in range(m):

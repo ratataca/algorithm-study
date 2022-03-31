@@ -30,5 +30,3 @@ def turn(matrix):
 for _ in range(r):
     turn(matrix)
 show(matrix)
-
-import sys
