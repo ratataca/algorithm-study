@@ -20,3 +20,4 @@ for i in range(n):
         dp[i + t[i]] = max(Max + p[i], dp[i + t[i]])
 
 print(max(dp))
+print(dp)
