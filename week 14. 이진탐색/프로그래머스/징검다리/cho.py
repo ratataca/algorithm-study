@@ -17,10 +17,9 @@ def solution(distance, rocks, n):
                 remove += 1
             else:
                 cur = rock
-                result = min(result, mid)
 
         if remove <= n:
-            answer = result
+            answer = mid
             start = mid + 1
         else:
             end = mid - 1
