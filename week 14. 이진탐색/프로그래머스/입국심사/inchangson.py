@@ -2,7 +2,7 @@ def solution(n, times):
     answer = 0
     
     l = 0
-    h = 1e18
+    h = int(1e18)
     
     def get_complete_no(offered: int):
         cnt = 0
