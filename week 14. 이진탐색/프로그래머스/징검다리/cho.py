@@ -9,7 +9,6 @@ def solution(distance, rocks, n):
         mid = (start + end) // 2
         cur = 0
         remove = 0
-        result = 1e16
 
         for rock in rocks:
             l_dist = rock - cur
