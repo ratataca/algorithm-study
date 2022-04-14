@@ -1,4 +1,4 @@
-from collections import deque, defaultdict, Counter
+from collections import deque, Counter
 
 def show(arrs):
     for arr in arrs:
@@ -29,4 +29,5 @@ def solution(n, edge):
                 visited[idx] = visited[cur_node] + 1
         
     answer = Counter(visited)
+    print(answer)
     return answer[max(answer.keys())]
