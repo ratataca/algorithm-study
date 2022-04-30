@@ -139,5 +139,67 @@ def main():
         print('='*(2*buf + len(str(t)) +2), '\n')
     return
 
+def func1(list1):
+
+    for idx in range(len(list1)):
+        list1[idx] += idx
+
+    return
+
+def func2(list1, list2, list3, list4, list5, list6, list7, list8, list9, list10):
+
+    for idx in range(len(list1)):
+        list1[idx] += idx
+        list2[idx] += idx
+        list3[idx] += idx
+        list4[idx] += idx
+        list5[idx] += idx
+        list6[idx] += idx
+        list7[idx] += idx
+        list8[idx] += idx
+        list9[idx] += idx
+        list10[idx] += idx
+
+    return
+
+
+def main2():
+    n = 500000
+    test_arr = list(range(10*n))
+
+    test_arr1 = list(range(n))
+    test_arr11 = list(range(n))
+    test_arr2 = list(range(n))
+    test_arr12 = list(range(n))
+    test_arr3 = list(range(n))
+    test_arr13 = list(range(n))
+    test_arr4 = list(range(n))
+    test_arr14 = list(range(n))
+    test_arr5 = list(range(n))
+    test_arr15 = list(range(n))
+    test_arr6 = list(range(n))
+    test_arr16 = list(range(n))
+    test_arr7 = list(range(n))
+    test_arr17 = list(range(n))
+    test_arr8 = list(range(n))
+    test_arr18 = list(range(n))
+    test_arr9 = list(range(n))
+    test_arr19 = list(range(n))
+    test_arr10 = list(range(n))
+    test_arr110 = list(range(n))
+    
+    start1 = time.time()
+    func1(test_arr)
+    end1 = time.time()
+    
+    start2 = time.time()
+    func2(test_arr1, test_arr2, test_arr3, test_arr4, test_arr5, test_arr6, test_arr7, test_arr8, test_arr9, test_arr10)
+    end2 = time.time()
+
+    print(f'time 1: {end1 - start1:.5f}sec')
+    print(f'time 2: {end2 - start2:.5f}sec')
+
+
 if __name__ == '__main__':
     main()
+    #main2()
