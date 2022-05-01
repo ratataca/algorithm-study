@@ -4,7 +4,7 @@ def solution(people, limit):
     left = 0
     
     visited = [0] * len(people)
-    cnt = 0
+    cnt = 0    
     while left < right:
         if people[left] + people[right] <= limit:
             visited[left] = 1
@@ -12,7 +12,6 @@ def solution(people, limit):
             left += 1
             right -= 1
             cnt += 1
-
         else:        
             if limit - people[left] > limit - people[right]:
                 visited[right] = 1
@@ -22,4 +21,8 @@ def solution(people, limit):
                 visited[left] = 1
                 left += 1
                 cnt += 1
+                
+    if 0 in visited:
+        cnt += 1
+    
     return cnt
